@@ -6,7 +6,7 @@
 <div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Ajout Glissière </div>
+					<div class="breadcrumb-title pe-3">Gestion Glissière </div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
@@ -52,10 +52,10 @@
 
 
 			<div class="row mb-3">
-				<div class="col-sm-3">
+				<div class=" col-sm-3">
 					<h6 class="mb-0">Image Glissière   </h6>
 				</div>
-				<div class="col-sm-9 text-secondary">
+				<div class="form-group col-sm-9 text-secondary">
 					<input type="file" name="slider_image" class="form-control"  id="image"   />
 				</div>
 			</div>
@@ -78,7 +78,7 @@
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-9 text-secondary">
-					<input type="submit" class="btn btn-primary px-4" value="Save Changes" />
+					<input type="submit" class="btn btn-primary px-4" value="Sauvegarder" />
 				</div>
 			</div>
 		</div>
@@ -111,13 +111,19 @@
                 short_title: {
                     required : true,
                 },
+                slider_image: {
+                    required : true,
+                },
             },
             messages :{
                 slider_title: {
-                    required : 'Please Enter Slider Title',
+                    required : 'Bien vouloir renseigner le nom de la Glissière',
                 },
                 short_title: {
-                    required : 'Please Enter Short Title',
+                    required : 'Bien vouloir renseigner le Sous titre de la Glissière',
+                },
+                slider_image: {
+                    required : 'Bien vouloir choisir une image',
                 },
             },
             errorElement : 'span',

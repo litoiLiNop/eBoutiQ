@@ -6,13 +6,13 @@
 <div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Ajout Categorie </div>
+					<div class="breadcrumb-title pe-3">Gestion Categorie </div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Ajout Categorie </li>
+								<li class="breadcrumb-item active" aria-current="page">Nouvelle Categorie </li>
 							</ol>
 						</nav>
 					</div>
@@ -46,8 +46,8 @@
 				<div class="col-sm-3">
 					<h6 class="mb-0">Image de la catégorie </h6>
 				</div>
-				<div class="col-sm-9 text-secondary">
-					<input type="file" name="category_image" class="form-control"  id="image"   />
+				<div class="form-group col-sm-9 text-secondary">
+					<input name="category_image" type="file" name="category_image" class="form-control"  id="image"   />
 				</div>
 			</div>
 
@@ -58,7 +58,7 @@
 					<h6 class="mb-0"> </h6>
 				</div>
 				<div class="col-sm-9 text-secondary">
-					 <img id="showImage" src="{{ url('upload/no_image.jpg') }}" alt="Admin" style="width:100px; height: 100px;"  >
+					 <img id="showImage" src="{{ url('upload/no_image.jpg') }}" alt="Category" style="width:100px; height: 100px;"  >
 				</div>
 			</div>
 
@@ -69,7 +69,7 @@
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-9 text-secondary">
-					<input type="submit" class="btn btn-primary px-4" value="Save Changes" />
+					<input type="submit" class="btn btn-primary px-4" value="Sauvegarder" />
 				</div>
 			</div>
 		</div>
@@ -99,10 +99,16 @@
                 category_name: {
                     required : true,
                 },
+                category_image: {
+                    required : true,
+                },
             },
             messages :{
                 category_name: {
-                    required : 'Please Enter Category Name',
+                    required : 'Bien vouloir renseigner le nom de la catégorie',
+                },
+                category_image: {
+                    required : 'Bien vouloir choisir une image',
                 },
             },
             errorElement : 'span',

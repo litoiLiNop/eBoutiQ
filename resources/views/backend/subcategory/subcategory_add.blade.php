@@ -6,13 +6,13 @@
 <div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Ajout SousCatégorie </div>
+					<div class="breadcrumb-title pe-3">Gestion SousCatégorie </div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Ajout SousCatégorie </li>
+								<li class="breadcrumb-item active" aria-current="page">Ajout de la SousCatégorie </li>
 							</ol>
 						</nav>
 					</div>
@@ -34,11 +34,12 @@
 
 			<div class="row mb-3">
 				<div class="col-sm-3">
-					<h6 class="mb-0">Catégorie</h6>
+					<h6 class="mb-0">Nom de la Catégorie</h6>
 				</div>
 				<div class="form-group col-sm-9 text-secondary">
 	 	<select name="category_id" class="form-select mb-3" aria-label="Default select example">
-			 <option selected="">Dérouler ce menu</option>
+			 <option ></option>
+			 {{-- <option selected="">Dérouler ce menu</option> --}}
 
 			 @foreach($categories as $category)
 		 	<option value="{{ $category->id }}">{{ $category->category_name }}</option>
@@ -51,7 +52,7 @@
 
            <div class="row mb-3">
 				<div class="col-sm-3">
-					<h6 class="mb-0">Nom SousCatégorie</h6>
+					<h6 class="mb-0">Nom de la SousCatégorie</h6>
 				</div>
 				<div class="form-group col-sm-9 text-secondary">
 					<input type="text" name="subcategory_name" class="form-control"   />
@@ -91,6 +92,9 @@
     $(document).ready(function (){
         $('#myForm').validate({
             rules: {
+                category_id: {
+                    required : true,
+                },
                 subcategory_name: {
                     required : true,
                 },
@@ -99,6 +103,10 @@
                 subcategory_name: {
                     required : 'Renseignez le nom de la SousCatégorie',
                 },
+                category_id: {
+                    required : 'Dérouler le menu et choisir le nom de la Catégorie',
+                },
+
             },
             errorElement : 'span',
             errorPlacement: function (error,element) {

@@ -14,7 +14,7 @@
 
             <li>
             <a href="{{ route('admin.dashboard') }}">
-                <div class="parent-icon"><i class='bx bx-cookie'></i>
+                <div class="parent-icon"><i class='bx bx-home-circle'></i>
                 </div>
                 <div class="menu-title">Tableau de bord</div>
             </a>
@@ -23,9 +23,9 @@
 
         <li>
             <a href="javascript:;" class="has-arrow">
-                <div class="parent-icon"><i class='bx bx-home-circle'></i>
+                <div class="parent-icon"><i class='bx bx-category'></i>
                 </div>
-                <div class="menu-title">Marque</div>
+                <div class="menu-title">Gestion Marque</div>
             </a>
             <ul>
                 <li> <a href="{{ route('all.brand') }}"><i class="bx bx-right-arrow-alt"></i>Toutes les  Marques</a>
@@ -39,7 +39,7 @@
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
                 </div>
-                <div class="menu-title">Catégorie</div>
+                <div class="menu-title">Gestion Catégorie</div>
             </a>
             <ul>
                 <li> <a href="{{ route('all.category') }}"><i class="bx bx-right-arrow-alt"></i> Toutes les Catégories</a>
@@ -55,7 +55,7 @@
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
                 </div>
-                <div class="menu-title">SousCatégorie</div>
+                <div class="menu-title">Gestion S/Catégorie</div>
             </a>
             <ul>
                 <li> <a href="{{ route('all.subcategory') }}"><i class="bx bx-right-arrow-alt"></i> Les SousCatégories</a>
@@ -67,20 +67,20 @@
         </li>
 
 
-        {{-- <li>
+        <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class="bx bx-category"></i>
                 </div>
-                <div class="menu-title">Product Manage</div>
+                <div class="menu-title">Gestion Produit</div>
             </a>
             <ul>
-                <li> <a href="{{ route('all.product') }}"><i class="bx bx-right-arrow-alt"></i>All Product</a>
+                <li> <a href="{{ route('all.product') }}"><i class="bx bx-right-arrow-alt"></i>Tous les Produits</a>
                 </li>
-                <li> <a href="{{ route('add.product') }}"><i class="bx bx-right-arrow-alt"></i>Add Product</a>
+                <li> <a href="{{ route('add.product') }}"><i class="bx bx-right-arrow-alt"></i>Ajout Produit</a>
                 </li>
 
             </ul>
-        </li> --}}
+        </li>
 
         <li>
             <a href="javascript:;" class="has-arrow">
