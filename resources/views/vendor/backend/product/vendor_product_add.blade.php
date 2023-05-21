@@ -1,17 +1,18 @@
-@extends('admin.admin_dashboard')
-@section('admin')
+@extends('vendor.vendor_dashboard')
+@section('vendor')
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <div class="page-content">
 
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Gestion Produit</div>
+					<div class="breadcrumb-title pe-3">Gestion de Produit</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
-								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+								<li class="breadcrumb-item"><a href="{{ route('vendor.add.product') }}"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Nouveau Produit</li>
+								<li class="breadcrumb-item active" aria-current="page">Ajout de Produit</li>
 							</ol>
 						</nav>
 					</div>
@@ -24,7 +25,7 @@
 	  <h5 class="card-title">Nouveau Produit</h5>
 	  <hr/>
 
-<form id="myForm" method="post" action="{{ route('store.product') }}" enctype="multipart/form-data" >
+<form id="myForm" method="post" action="{{ route('vendor.store.product') }}" enctype="multipart/form-data" >
 			@csrf
 
        <div class="form-body mt-4">
@@ -35,45 +36,45 @@
 
 			<div class="form-group mb-3">
 				<label for="inputProductTitle" class="form-label">Nom du Produit</label>
-				<input type="text" name="product_name" class="form-control" id="inputProductTitle" placeholder="Intitulé du Produit">
+				<input type="text" name="product_name" class="form-control" id="inputProductTitle" placeholder="Enter product title">
 			  </div>
 
             <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Etiquette</label>
-				<input type="text" name="product_tags" class="form-control visually-hidden" data-role="tagsinput" value="nouveau produit,top produit">
+				<label for="inputProductTitle" class="form-label">Etiquettes</label>
+				<input type="text" name="product_tags" class="form-control visually-hidden" data-role="tagsinput" value="nouveau,top ">
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Taille du Produit</label>
-				<input type="text" name="product_size" class="form-control visually-hidden" data-role="tagsinput" value="Petite,Moyenne,Large ">
+				<label for="inputProductTitle" class="form-label">Taille</label>
+				<input type="text" name="product_size" class="form-control visually-hidden" data-role="tagsinput" value="Petite,Moyenne,Grande ">
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Format du Produit</label>
-				<input type="text" name="product_format" class="form-control visually-hidden" data-role="tagsinput" value="125 g,1 Kg,12 cl ">
+				<label for="inputProductTitle" class="form-label">Format</label>
+				<input type="text" name="product_format" class="form-control visually-hidden" data-role="tagsinput" value="125 g,2 cm,05 L">
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Couleur du Produit</label>
-				<input type="text" name="product_color" class="form-control visually-hidden" data-role="tagsinput" value="Rouge,Bleu,Noir">
+				<label for="inputProductTitle" class="form-label">Couleur</label>
+				<input type="text" name="product_color" class="form-control visually-hidden" data-role="tagsinput" value="Rouge,Bleu,Blanc">
 			  </div>
 
 
 
 			  <div class="form-group mb-3">
-				<label for="inputProductDescription" class="form-label">Courte Description</label>
+				<label for="inputProductDescription" class="form-label"> Courte Description</label>
 				<textarea name="short_descp" class="form-control" id="inputProductDescription" rows="3"></textarea>
 			  </div>
 
 			   <div class="mb-3">
-				<label for="inputProductDescription" class="form-label">Longue Description</label>
-				<textarea id="mytextarea" name="long_descp">Salut, PHP!</textarea>
+				<label for="inputProductDescription" class="form-label"> Longue Description</label>
+				<textarea id="mytextarea" name="long_descp">Hello, World!</textarea>
 			  </div>
 
 
 
   <div class="form-group mb-3">
-				<label for="inputProductTitle" class="form-label">Image Principale</label>
+				<label for="inputProductTitle" class="form-label">Image principale</label>
 				<input name="product_thumbnail" class="form-control" type="file" id="formFile" onChange="mainThamUrl(this)" >
 
 				<img src="" id="mainThmb" />
@@ -82,7 +83,7 @@
 
 
   <div class="form-group mb-3">
-				<label for="inputProductTitle" class="form-label"> Multiples Images </label>
+				<label for="inputProductTitle" class="form-label">Multiple Images</label>
 				<input class="form-control" name="multi_img[]" type="file" id="multiImg" multiple="">
 
 			<div class="row" id="preview_img"></div>
@@ -98,7 +99,7 @@
               <div class="row g-3">
 
 				<div class="form-group col-md-6">
-					<label for="inputPrice" class="form-label"> Prix</label>
+					<label for="inputPrice" class="form-label">Prix</label>
 					<input type="text" name="selling_price" class="form-control" id="inputPrice" placeholder="00.00">
 				  </div>
 				  <div class="col-md-6">
@@ -106,17 +107,17 @@
 					<input type="text" name="discount_price" class="form-control" id="inputCompareatprice" placeholder="00.00">
 				  </div>
 				  <div class="form-group col-md-6">
-					<label for="inputCostPerPrice" class="form-label">Code du Produit</label>
+					<label for="inputCostPerPrice" class="form-label"> Code</label>
 					<input type="text" name="product_code" class="form-control" id="inputCostPerPrice" placeholder="00.00">
 				  </div>
 				  <div class="form-group col-md-6">
-					<label for="inputStarPoints" class="form-label">Quantité</label>
+					<label for="inputStarPoints" class="form-label"> Quantité</label>
 					<input type="text" name="product_qty" class="form-control" id="inputStarPoints" placeholder="00.00">
 				  </div>
 
 
 				  <div class="form-group col-12">
-					<label for="inputProductType" class="form-label">Marque</label>
+					<label for="inputProductType" class="form-label"> Marque</label>
 					<select name="brand_id" class="form-select" id="inputProductType">
 						<option></option>
 						@foreach($brands as $brand)
@@ -126,7 +127,7 @@
 				  </div>
 
 				  <div class="form-group col-12">
-					<label for="inputVendor" class="form-label">Categorie</label>
+					<label for="inputVendor" class="form-label"> Categorie</label>
 					<select name="category_id" class="form-select" id="inputVendor">
 						<option></option>
 						@foreach($categories as $cat)
@@ -136,7 +137,7 @@
 				  </div>
 
 				  <div class="form-group col-12">
-					<label for="inputCollection" class="form-label"> Sous Categorie</label>
+					<label for="inputCollection" class="form-label"> SousCategorie</label>
 					<select name="subcategory_id" class="form-select" id="inputCollection">
 						<option></option>
 
@@ -144,15 +145,7 @@
 				  </div>
 
 
-				  <div class="col-12">
-					<label for="inputCollection" class="form-label">Choisir le Vendeur</label>
-					<select name="vendor_id" class="form-select" id="inputCollection">
-						<option></option>
-					@foreach($activeVendor as $vendor)
-						<option value="{{ $vendor->id }}">{{ $vendor->name }}</option>
-						 @endforeach
-					  </select>
-				  </div>
+
 
 
 				  <div class="col-12">
@@ -162,14 +155,14 @@
 	 <div class="col-md-6">
     <div class="form-check">
  <input class="form-check-input" name="hot_deals" type="checkbox" value="1" id="flexCheckDefault">
-			<label class="form-check-label" for="flexCheckDefault">Offre à la Une</label>
+			<label class="form-check-label" for="flexCheckDefault"> Bonnes affaires</label>
 		</div>
 	</div>
 
 	<div class="col-md-6">
     <div class="form-check">
 			<input class="form-check-input" name="featured" type="checkbox" value="1" id="flexCheckDefault">
-			<label class="form-check-label" for="flexCheckDefault">En Vedette</label>
+			<label class="form-check-label" for="flexCheckDefault">En vedette</label>
 		</div>
 	</div>
 
@@ -179,7 +172,7 @@
 <div class="col-md-6">
     <div class="form-check">
 			<input class="form-check-input" name="special_offer" type="checkbox" value="1" id="flexCheckDefault">
-			<label class="form-check-label" for="flexCheckDefault">Offre Spéciale</label>
+			<label class="form-check-label" for="flexCheckDefault">Offre speciale </label>
 		</div>
 	</div>
 
@@ -187,7 +180,7 @@
 	<div class="col-md-6">
     <div class="form-check">
 			<input class="form-check-input" name="special_deals" type="checkbox" value="1" id="flexCheckDefault">
-			<label class="form-check-label" for="flexCheckDefault">Special Deals</label>
+			<label class="form-check-label" for="flexCheckDefault">A La Une</label>
 		</div>
 	</div>
 
@@ -267,7 +260,7 @@
                     required : 'Bien vouloir choisir une image',
                 },
                 multi_img: {
-                    required : 'Bien vouloir choisir des images',
+                    required : 'Bien vouloir ajputer des images secpndaires>',
                 },
                 selling_price: {
                     required : 'Bien vouloir renseigner le prix de vente',
@@ -277,15 +270,6 @@
                 },
                  product_qty: {
                     required : 'Bien vouloir renseigner la Quantité',
-                },
-                brand_id: {
-                    required : 'Ce champ est requis',
-                },
-                category_id: {
-                    required : 'Ce champ est requis',
-                },
-                subcategory_id: {
-                    required : 'Ce champ est requis',
                 },
 
             },
@@ -359,7 +343,7 @@
   				var category_id = $(this).val();
   				if (category_id) {
   					$.ajax({
-  						url: "{{ url('/subcategory/ajax') }}/"+category_id,
+  						url: "{{ url('/vendor/subcategory/ajax') }}/"+category_id,
   						type: "GET",
   						dataType:"json",
   						success:function(data){
