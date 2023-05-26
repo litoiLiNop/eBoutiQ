@@ -31,7 +31,7 @@
 			<tr>
 				<th>Sl</th>
 				<th>Titre </th>
-				<th>Soutitre </th>
+				<th>Soustitre </th>
 				<th> Image </th>
 				<th>Action</th>
 			</tr>
@@ -58,7 +58,7 @@
 			<tr>
 				<th>Sl</th>
 				<th>Titre </th>
-				<th>Soutitre </th>
+				<th>Soustitre </th>
 				<th> Image </th>
 				<th>Action</th>
 			</tr>

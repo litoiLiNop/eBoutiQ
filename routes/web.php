@@ -8,11 +8,13 @@ use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\VendorProductController;
+use App\Http\Middleware\RedirectIfAuthenticated;
 
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\SliderController;
-use App\Http\Middleware\RedirectIfAuthenticated;
+
+use App\Http\Controllers\Frontend\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -201,5 +203,47 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     });
 
-
 }); // Admin End Middleware
+
+/// Frontend Product Details All Route
+
+Route::get('/product/details/{id}/{slug}', [IndexController::class, 'ProductDetails']);
+// Route::get('/vendor/details/{id}', [IndexController::class, 'VendorDetails'])->name('vendor.details');
+
+// Route::get('/vendor/all', [IndexController::class, 'VendorAll'])->name('vendor.all');
+
+// Route::get('/product/category/{id}/{slug}', [IndexController::class, 'CatWiseProduct']);
+
+// Route::get('/product/subcategory/{id}/{slug}', [IndexController::class, 'SubCatWiseProduct']);
+
+
+
+// Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax']);
+
+// Route::post('/cart/data/store/{id}', [CartController::class, 'AddToCart']);
+
+
+// Route::get('/product/mini/cart', [CartController::class, 'AddMiniCart']);
+
+// Route::get('/minicart/product/remove/{rowId}', [CartController::class, 'RemoveMiniCart']);
+
+
+// Route::post('/dcart/data/store/{id}', [CartController::class, 'AddToCartDetails']);
+
+
+// Route::post('/add-to-wishlist/{product_id}', [WishlistController::class, 'AddToWishList']);
+
+
+
+// Route::middleware(['auth', 'role:user'])->group(function () {
+
+
+//     Route::controller(WishlistController::class)->group(function () {
+//         Route::get('/wishlist', 'AllWishlist')->name('wishlist');
+//         Route::get('/get-wishlist-product', 'GetWishlistProduct');
+
+
+//     });
+
+
+// });
