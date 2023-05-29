@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\SliderController;
 
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\CartController;
 
 
 /*
@@ -225,6 +226,9 @@ Route::get('/product/subcategory/{id}/{slug}', [IndexController::class, 'SubCatW
 // Product view Modal with Ajax
 
 Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax']);
+
+//Add to cart store data
+Route::post('/cart/data/store/{id}', [CartController::class, 'AddToCart']);
 // Route::get('/vendor/details/{id}', [IndexController::class, 'VendorDetails'])->name('vendor.details');
 
 // Route::get('/vendor/all', [IndexController::class, 'VendorAll'])->name('vendor.all');
@@ -234,18 +238,12 @@ Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax
 // Route::get('/product/subcategory/{id}/{slug}', [IndexController::class, 'SubCatWiseProduct']);
 
 
+Route::get('/product/mini/cart', [CartController::class, 'AddMiniCart']);
 
-// Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax']);
-
-// Route::post('/cart/data/store/{id}', [CartController::class, 'AddToCart']);
-
-
-// Route::get('/product/mini/cart', [CartController::class, 'AddMiniCart']);
-
-// Route::get('/minicart/product/remove/{rowId}', [CartController::class, 'RemoveMiniCart']);
+Route::get('/minicart/product/remove/{rowId}', [CartController::class, 'RemoveMiniCart']);
 
 
-// Route::post('/dcart/data/store/{id}', [CartController::class, 'AddToCartDetails']);
+Route::post('/dcart/data/store/{id}', [CartController::class, 'AddToCartDetails']);
 
 
 // Route::post('/add-to-wishlist/{product_id}', [WishlistController::class, 'AddToWishList']);

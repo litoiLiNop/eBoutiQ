@@ -51,8 +51,8 @@
             <span class="current-price text-brand" id="pprice"> </span>
             <span class="current-price text-brand ml-5"> FCFA</span>
 
-            <span class="old-price font-md ml-15" id="oldprice">FCFA  </span>
-            <span class="old-price font-md ml-5"> FCFA</span>
+            <span class="old-price font-md ml-15" id="oldprice">  </span>
+            <span class="old-price font-md ml-5">FCFA</span>
 
         </div>
     </div>

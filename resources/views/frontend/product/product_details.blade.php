@@ -40,11 +40,8 @@
             	@if($product->product_qty > 0)
             	 <span class="stock-status in-stock">Disponible </span>
             	@else
-<<<<<<< HEAD
             	<span class="stock-status out-stock">Epuisé </span>
-=======
-            	<span class="stock-status out-stock">Eppuisé </span>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
             	@endif
 
 
@@ -66,27 +63,18 @@
 
  @if($product->discount_price == NULL)
 <div class="product-price primary-color float-left">
-<<<<<<< HEAD
             <span class="current-price text-brand">{{ $product->selling_price }} FCFA</span>
-=======
-            <span class="current-price text-brand">${{ $product->selling_price }}</span>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
 
         </div>
  @else
 
  <div class="product-price primary-color float-left">
-<<<<<<< HEAD
             <span class="current-price text-brand">{{ $product->discount_price }} FCFA</span>
             <span>
                 <span class="save-price font-md color3 ml-15">{{ round($discount) }}% En moins</span>
                 <span class="old-price font-md ml-15">{{ $product->selling_price }} FCFA</span>
-=======
-            <span class="current-price text-brand">{{ $product->discount_price }}FCFA</span>
-            <span>
-                <span class="save-price font-md color3 ml-15">{{ round($discount) }}% Off</span>
-                <span class="old-price font-md ml-15">{{ $product->selling_price }}FCFA</span>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
             </span>
         </div>
 
@@ -103,11 +91,8 @@
      @else
 
 <div class="attr-detail attr-size mb-30">
-<<<<<<< HEAD
         <strong class="mr-10" style="width:50px;">Taille: </strong>
-=======
-        <strong class="mr-10" style="width:50px;">Size : </strong>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
          <select class="form-control unicase-form-control" id="dsize">
          	<option selected="" disabled="">--Choisir--</option>
          	@foreach($product_size as $size)
@@ -123,11 +108,8 @@
      @else
 
 <div class="attr-detail attr-size mb-30">
-<<<<<<< HEAD
         <strong class="mr-10" style="width:50px;">Format: </strong>
-=======
-        <strong class="mr-10" style="width:50px;">Format : </strong>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
          <select class="form-control unicase-form-control" id="dformat">
          	<option selected="" disabled="">--Choisir--</option>
          	@foreach($product_format as $format)
@@ -145,11 +127,8 @@
      @else
 
 <div class="attr-detail attr-size mb-30">
-<<<<<<< HEAD
         <strong class="mr-10" style="width:50px;">Couleur: </strong>
-=======
-        <strong class="mr-10" style="width:50px;">Couleur : </strong>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
          <select class="form-control unicase-form-control" id="dcolor">
          	<option selected="" disabled="">--Choisir--</option>
          	@foreach($product_color as $color)
@@ -216,7 +195,6 @@
     <a class="nav-link active" id="Description-tab" data-bs-toggle="tab" href="#Description">Description</a>
 </li>
 <li class="nav-item">
-<<<<<<< HEAD
     <a class="nav-link" id="Additional-info-tab" data-bs-toggle="tab" href="#Additional-info">Infos</a>
 </li>
 <li class="nav-item">
@@ -224,24 +202,14 @@
 </li>
 <li class="nav-item">
     <a class="nav-link" id="Reviews-tab" data-bs-toggle="tab" href="#Reviews">Avis (3)</a>
-=======
-    <a class="nav-link" id="Additional-info-tab" data-bs-toggle="tab" href="#Additional-info">Additional info</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" id="Vendor-info-tab" data-bs-toggle="tab" href="#Vendor-info">Vendor</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" id="Reviews-tab" data-bs-toggle="tab" href="#Reviews">Reviews (3)</a>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
 </li>
 </ul>
 <div class="tab-content shop_info_tab entry-main-content">
 <div class="tab-pane fade show active" id="Description">
     <div class="">
-<<<<<<< HEAD
         {{-- !! to avoid html code !! --}}
-=======
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
         <p> {!! $product->long_descp !!} </p>
 
     </div>
@@ -364,20 +332,14 @@
     	@if($product->vendor_id == NULL)
 <ul class="contact-infor mb-50">
         <li><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-location.svg') }}" alt="" /><strong>Address: </strong> <span>Owner</span></li>
-<<<<<<< HEAD
         <li><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-contact.svg') }}" alt="" /><strong>Vendeur: </strong><span>Owner</span></li>
-=======
-        <li><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-contact.svg') }}" alt="" /><strong>Vendeur:</strong><span>Owner</span></li>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
     </ul>
     	@else
     	 <ul class="contact-infor mb-50">
         <li><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-location.svg') }}" alt="" /><strong>Address: </strong> <span>{{ $product['vendor']['address'] }}</span></li>
-<<<<<<< HEAD
         <li><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-contact.svg') }}" alt="" /><strong>Vendeur: </strong><span>{{ $product['vendor']['phone'] }}</span></li>
-=======
-        <li><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-contact.svg') }}" alt="" /><strong>Vendeur:</strong><span>{{ $product['vendor']['phone'] }}</span></li>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
     </ul>
 
     	@endif
@@ -534,11 +496,8 @@
 
 <div class="row mt-60">
 <div class="col-12">
-<<<<<<< HEAD
 <h2 class="section-title style-1 mb-30">Articles similaires</h2>
-=======
-<h2 class="section-title style-1 mb-30">Article similaires</h2>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
 </div>
 <div class="col-12">
 <div class="row related-products">
@@ -592,11 +551,8 @@
 
                     @else
                     <div class="product-price">
-<<<<<<< HEAD
                         <span>{{ $product->discount_price }} FCFA</span>
-=======
-                        <span>{{ $product->discount_price }}</span>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
                         <span class="old-price">${{ $product->selling_price }} FCFA</span>
                     </div>
                     @endif

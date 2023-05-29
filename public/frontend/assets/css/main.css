@@ -1,6 +1,6 @@
 /***
  Theme Name: Nest
- Description: eBoutiQ, Super Market
+ Description: Grocery, Super Market, eCommerce HTML Template
  Version: 1.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1812,11 +1812,7 @@ label {
 .form-control {
     border: 1px solid #f0e9ff;
     border-radius: 10px;
-<<<<<<< HEAD
-    height: 38px;
-=======
     height: 48px;
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
     padding-left: 18px;
     font-size: 16px;
     background: transparent;
@@ -3496,11 +3492,7 @@ table .product-thumbnail img {
 
 .custom-modal .modal-dialog .modal-content {
     border-radius: 25px;
-<<<<<<< HEAD
-    padding: 20px;
-=======
     padding: 40px;
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
     border: 1px solid #bce3c9;
 }
 
@@ -4344,11 +4336,7 @@ table .product-thumbnail img {
 }
 
 .product-cart-wrap .product-content-wrap .product-price span {
-<<<<<<< HEAD
-    font-size: 16px;
-=======
     font-size: 18px;
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
     font-weight: bold;
     color: #3b56b7;
 }
@@ -5375,11 +5363,7 @@ table .product-thumbnail img {
 }
 
 .detail-info .product-price .current-price {
-<<<<<<< HEAD
-    font-size: 35px;
-=======
     font-size: 40px;
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
     text-decoration: none;
     font-weight: 900;
 }
@@ -5387,13 +5371,8 @@ table .product-thumbnail img {
 .detail-info .product-price .old-price {
     text-decoration: line-through;
     color: #b6b6b6;
-<<<<<<< HEAD
-    margin-left: 10px;
-    font-size: 20px;
-=======
     margin-left: 20px;
     font-size: 28px;
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
     font-weight: 700;
     display: block;
 }

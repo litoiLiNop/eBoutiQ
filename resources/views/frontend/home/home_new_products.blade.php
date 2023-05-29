@@ -6,11 +6,7 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->limit(7)->get
     <section class="product-tabs section-padding position-relative">
         <div class="container">
             <div class="section-title style-2 wow animate__animated animate__fadeIn">
-<<<<<<< HEAD
                 <h3> Nouveautés </h3>
-=======
-                <h3> Nouveaux articles </h3>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
                 <ul class="nav nav-tabs links" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="nav-tab-one"  data-bs-toggle="tab" data-bs-target="#tab-one" type="button" role="tab" aria-controls="tab-one"  aria-selected="true">Tous</button>
@@ -43,11 +39,7 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->limit(7)->get
 
                 <a aria-label="Comparer" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
 
-<<<<<<< HEAD
 <a aria-label="Prévisualiser" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" id="{{ $product->id }}" onclick="productView(this.id)" ><i class="fi-rs-eye"></i></a>
-=======
-<a aria-label="Aperçu" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" id="{{ $product->id }}" onclick="productView(this.id)" ><i class="fi-rs-eye"></i></a>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
 
             </div>
 

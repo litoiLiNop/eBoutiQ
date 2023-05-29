@@ -7,11 +7,8 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->get();
         <div class="container wow animate__animated animate__fadeIn">
             <div class="section-title">
                 <div class="title">
-<<<<<<< HEAD
-                    <h3>Catégories</h3>
-=======
-                    <h3>Les Catégories Les plus Visitées</h3>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
+                    <h3>Catégories Les plus Visitées</h3>
 
                 </div>
                 <div class="slider-arrow slider-arrow-2 flex-right carausel-10-columns-arrow" id="carausel-10-columns-arrows"></div>
@@ -30,11 +27,8 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->get();
     $products = App\Models\Product::where('category_id',$category->id)->get();
     @endphp
 
-<<<<<<< HEAD
-                        <span>{{ count($products) }} items</span>
-=======
+
                         <span>{{ count($products) }} articles</span>
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
                     </div>
                     @endforeach
 
