@@ -10,17 +10,13 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\VendorProductController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\Backend\SubCategoryController;
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
+
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\SliderController;
-use App\Http\Controllers\Backend\SubCategoryController;
 
 use App\Http\Controllers\Frontend\IndexController;
 
-use App\Http\Controllers\Frontend\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -218,7 +214,6 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 /// Frontend Product Details All Route
 
 Route::get('/product/details/{id}/{slug}', [IndexController::class, 'ProductDetails']);
-<<<<<<< HEAD
 Route::get('/vendor/details/{id}', [IndexController::class, 'VendorDetails'])->name('vendor.details');
 
 Route::get('/vendor/all', [IndexController::class, 'VendorAll'])->name('vendor.all');
@@ -230,7 +225,6 @@ Route::get('/product/subcategory/{id}/{slug}', [IndexController::class, 'SubCatW
 // Product view Modal with Ajax
 
 Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax']);
-=======
 // Route::get('/vendor/details/{id}', [IndexController::class, 'VendorDetails'])->name('vendor.details');
 
 // Route::get('/vendor/all', [IndexController::class, 'VendorAll'])->name('vendor.all');
@@ -242,7 +236,6 @@ Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax
 
 
 // Route::get('/product/view/modal/{id}', [IndexController::class, 'ProductViewAjax']);
->>>>>>> e12420512f7332e2cee091ed8927a5fbf16b63d4
 
 // Route::post('/cart/data/store/{id}', [CartController::class, 'AddToCart']);
 
