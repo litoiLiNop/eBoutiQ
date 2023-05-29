@@ -6,7 +6,7 @@
 <div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Ajout de la Marque </div>
+					<div class="breadcrumb-title pe-3">Gestion Marque </div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
@@ -46,8 +46,8 @@
 				<div class="col-sm-3">
 					<h6 class="mb-0"> Image de la Marque </h6>
 				</div>
-				<div class="col-sm-9 text-secondary">
-					<input type="file" name="brand_image" class="form-control"  id="image"   />
+				<div class=" form-group col-sm-9 text-secondary">
+					<input name="brand_image" type="file"  class="form-control"  id="image"   />
 				</div>
 			</div>
 
@@ -58,7 +58,7 @@
 					<h6 class="mb-0"> </h6>
 				</div>
 				<div class="col-sm-9 text-secondary">
-					 <img id="showImage" src="{{ url('upload/no_image.jpg') }}" alt="Admin" style="width:100px; height: 100px;"  >
+					 <img id="showImage" src="{{ url('upload/no_image.jpg') }}" alt="Marque" style="width:100px; height: 100px;"  >
 				</div>
 			</div>
 
@@ -99,10 +99,17 @@
                 brand_name: {
                     required : true,
                 },
+                brand_image: {
+                    required : true,
+                },
+
             },
             messages :{
                 brand_name: {
                     required : 'Renseignez le nom de la Marque',
+                },
+                brand_image: {
+                    required : 'Bien vouloir choisir une image',
                 },
             },
             errorElement : 'span',

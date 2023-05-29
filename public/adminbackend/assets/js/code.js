@@ -16,7 +16,7 @@ $(function () {
             if (result.isConfirmed) {
                 window.location.href = link;
                 Swal.fire(
-                    "Supprimée!",
+                    "Suppression!",
                     "Les données ont été supprimées.",
                     "success"
                 );

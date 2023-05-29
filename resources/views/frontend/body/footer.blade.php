@@ -10,16 +10,16 @@ $setting = App\Models\SiteSetting::find(1);
                         <div class="position-relative newsletter-inner">
                             <div class="newsletter-content">
                                 <h2 class="mb-20">
-                                    Stay home & get your daily <br />
-                                    needs from our shop
+                                    Depuis Nos Rayons Remplissez <br />
+                                    Votre Panier Chez Vous
                                 </h2>
-                                <p class="mb-45">Start You'r Daily Shopping with <span class="text-brand">Nest Mart</span></p>
+                                <p class="mb-45">Commencez Votre Shopping Quotidien avec <span class="text-brand">Dôvv</span></p>
                                 <form class="form-subcriber d-flex">
-                                    <input type="email" placeholder="Your emaill address" />
-                                    <button class="btn" type="submit">Subscribe</button>
+                                    <input type="email" placeholder="Votre Emaill Addresse" />
+                                    <button class="btn" type="submit">Souscrire</button>
                                 </form>
                             </div>
-                            <img src="{{ asset('frontend/assets/imgs/banner/banner-9.png') }}" alt="newsletter" />
+                            <img src="{{ asset('frontend/assets/imgs/banner/banner-1-9.png') }}" alt="newsletter" />
                         </div>
                     </div>
                 </div>

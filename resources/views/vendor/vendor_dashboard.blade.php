@@ -38,7 +38,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-	<title>Tableau de bord Dépot</title>
+	<title>Vendeur eBoutiQ</title>
 </head>
 
 <body>
@@ -69,7 +69,7 @@
 
 	<!--end switcher-->
 	<!-- Bootstrap JS -->
-		<script src="{{ asset('adminbackend/assets/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ asset('adminbackend/assets/js/bootstrap.bundle.min.js') }}"></script>
 	<!--plugins-->
 	<script src="{{ asset('adminbackend/assets/js/jquery.min.js') }}"></script>
 	<script src="{{ asset('adminbackend/assets/plugins/simplebar/js/simplebar.min.js') }}"></script>

@@ -3,35 +3,35 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<div class="page-content"> 
+<div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Edit Slider </div>
+					<div class="breadcrumb-title pe-3">Cestion Glissière </div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Edit Slider </li>
+								<li class="breadcrumb-item active" aria-current="page">Editer Glissière </li>
 							</ol>
 						</nav>
 					</div>
 					<div class="ms-auto">
-				 
+
 					</div>
 				</div>
 				<!--end breadcrumb-->
 				<div class="container">
 					<div class="main-body">
 						<div class="row">
-							 
+
 <div class="col-lg-10">
 	<div class="card">
 		<div class="card-body">
 
 		<form id="myForm" method="post" action="{{ route('update.slider') }}" enctype="multipart/form-data" >
 			@csrf
-		 
+
 		 <input type="hidden" name="id" value="{{ $sliders->id }}">
 		 <input type="hidden" name="old_img" value="{{ $sliders->slider_image }}">
 
@@ -52,7 +52,7 @@
 					<input type="text" name="short_title" class="form-control" value="{{ $sliders->short_title }}"   />
 				</div>
 			</div>
-			  
+
 
 			<div class="row mb-3">
 				<div class="col-sm-3">
@@ -91,7 +91,7 @@
 
 
 	</div>
-	 
+
 
 
 
@@ -110,7 +110,7 @@
             rules: {
                 slider_title: {
                     required : true,
-                }, 
+                },
                 short_title: {
                     required : true,
                 },
@@ -123,7 +123,7 @@
                     required : 'Please Enter Short Title',
                 },
             },
-            errorElement : 'span', 
+            errorElement : 'span',
             errorPlacement: function (error,element) {
                 error.addClass('invalid-feedback');
                 element.closest('.form-group').append(error);
@@ -136,7 +136,7 @@
             },
         });
     });
-    
+
 </script>
 
 

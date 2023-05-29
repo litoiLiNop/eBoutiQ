@@ -35,7 +35,7 @@ class SubCategoryController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'SousCatégorie insérée!',
+            'message' => 'SubCategory Inserted Successfully',
             'alert-type' => 'success'
         );
 
@@ -51,7 +51,7 @@ class SubCategoryController extends Controller
         $subcategory = SubCategory::findOrFail($id);
         return view('backend.subcategory.subcategory_edit', compact('categories', 'subcategory'));
 
-    } // End Method
+    } //End Method
 
 
 
@@ -67,11 +67,12 @@ class SubCategoryController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'SousCatégorie Mise à Jour!',
+            'message' => 'SousCatégorie Mise à Jour',
             'alert-type' => 'success'
         );
 
         return redirect()->route('all.subcategory')->with($notification);
+
 
     } // End Method
 

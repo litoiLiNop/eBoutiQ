@@ -4,13 +4,13 @@
 <div class="page-content">
 				<!--breadcrumb-->
 				<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-					<div class="breadcrumb-title pe-3">Bannières</div>
+					<div class="breadcrumb-title pe-3">Gestion Publicité</div>
 					<div class="ps-3">
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb mb-0 p-0">
 								<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i></a>
 								</li>
-								<li class="breadcrumb-item active" aria-current="page">Toutes les Bannières</li>
+								<li class="breadcrumb-item active" aria-current="page">Toutes les Pubs</li>
 							</ol>
 						</nav>
 					</div>
@@ -30,7 +30,7 @@
 								<thead>
 			<tr>
 				<th>Sl</th>
-				<th>Titre de Bannière  </th>
+				<th>Titre de Pub  </th>
 				<th>Lien de Bannière  </th>
 				<th>Image de Bannière </th>
 				<th>Action</th>
@@ -57,7 +57,7 @@
 		<tfoot>
 			<tr>
 				<th>Sl</th>
-				<th>Titre de Bannière  </th>
+				<th>Titre de Pub  </th>
 				<th>Lien de Bannière  </th>
 				<th>Image de Bannière </th>
 				<th>Action</th>

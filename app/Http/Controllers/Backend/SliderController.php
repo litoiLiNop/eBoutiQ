@@ -112,7 +112,7 @@ class SliderController extends Controller
         Slider::findOrFail($id)->delete();
 
         $notification = array(
-            'message' => 'Slider Deleted Successfully',
+            'message' => 'Glissière supprimée!',
             'alert-type' => 'success'
         );
 
