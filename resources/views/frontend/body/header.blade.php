@@ -102,14 +102,21 @@
                 </form>
             </div>
 
+            <div class="header-action-icon-2">
+                <a href="{{ route('compare') }}">
+                    <img class="svgInject" alt="eBoutiQ" src="{{ asset('frontend/assets/imgs/theme/icons/icon-compare.svg')}}" />
+                    <span class="pro-count blue" id="compQty">0 </span>
 
+                </a>
+                <a href="{{ route('compare') }}"><span class="lable ml-0">Comparer</span></a>
+            </div>
 
             <div class="header-action-icon-2">
-                <a href="shop-wishlist.html">
-                    <img class="svgInject" alt="Nest" src="{{ asset('frontend/assets/imgs/theme/icons/icon-heart.svg') }}" />
-                    <span class="pro-count blue">6</span>
+                <a href="{{ route('wishlist') }}">
+                    <img class="svgInject" alt="eBoutiQ" src="{{ asset('frontend/assets/imgs/theme/icons/icon-heart.svg') }}" />
+                    <span class="pro-count blue" id="wishQty">0 </span>
                 </a>
-                <a href=""><span class="lable">Wishlist</span></a>
+                <a href="{{ route('wishlist') }}"><span class="lable">Liste Achats</span></a>
             </div>
 
 
@@ -120,7 +127,7 @@
                     <img alt="Dôvv" src="{{ asset('frontend/assets/imgs/theme/icons/icon-cart.svg') }}" />
                     <span class="pro-count blue" id="cartQty">0 </span>
                 </a>
-                <a href="shop-cart.html"><span class="lable">Cart</span></a>
+                <a href="{{ route('mycart') }}"><span class="lable">Cart</span></a>
                 <div class="cart-dropdown-wrap cart-dropdown-hm2">
 
 

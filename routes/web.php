@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\CompareController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\VendorController;
@@ -17,6 +18,7 @@ use App\Http\Controllers\Backend\SliderController;
 
 use App\Http\Controllers\Frontend\IndexController;
 use App\Http\Controllers\Frontend\CartController;
+use App\Http\Controllers\User\WishlistController;
 
 
 /*
@@ -246,19 +248,43 @@ Route::get('/minicart/product/remove/{rowId}', [CartController::class, 'RemoveMi
 Route::post('/dcart/data/store/{id}', [CartController::class, 'AddToCartDetails']);
 
 
-// Route::post('/add-to-wishlist/{product_id}', [WishlistController::class, 'AddToWishList']);
+Route::post('/add-to-wishlist/{product_id}', [WishlistController::class, 'AddToWishList']);
+
+/// Add to Compare
+Route::post('/add-to-compare/{product_id}', [CompareController::class, 'AddToCompare']);
+
+//Start Group User Middleware
+
+Route::middleware(['auth', 'role:user'])->group(function () {
 
 
-
-// Route::middleware(['auth', 'role:user'])->group(function () {
-
-
-//     Route::controller(WishlistController::class)->group(function () {
-//         Route::get('/wishlist', 'AllWishlist')->name('wishlist');
-//         Route::get('/get-wishlist-product', 'GetWishlistProduct');
+    Route::controller(WishlistController::class)->group(function () {
+        Route::get('/wishlist', 'AllWishlist')->name('wishlist');
+        Route::get('/get-wishlist-product', 'GetWishlistProduct');
+        Route::get('/wishlist-remove/{id}', 'WishlistRemove');
 
 
-//     });
+    });
+
+    // Compare All Route
+    Route::controller(CompareController::class)->group(function () {
+        Route::get('/compare', 'AllCompare')->name('compare');
+        Route::get('/get-compare-product', 'GetCompareProduct');
+
+        Route::get('/compare-remove/{id}', 'CompareRemove');
+    });
+
+    // Cart All Route
+    Route::controller(CartController::class)->group(function () {
+        Route::get('/mycart', 'MyCart')->name('mycart');
+        // Route::get('/get-cart-product', 'GetCartProduct');
+        // Route::get('/cart-remove/{rowId}', 'CartRemove');
+
+        // Route::get('/cart-decrement/{rowId}', 'CartDecrement');
+        // Route::get('/cart-increment/{rowId}', 'CartIncrement');
 
 
-// });
+    });
+
+
+}); //End Group User Middleware
