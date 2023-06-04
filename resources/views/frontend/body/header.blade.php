@@ -102,21 +102,21 @@
                 </form>
             </div>
 
-            <div class="header-action-icon-2">
-                <a href="{{ route('compare') }}">
-                    <img class="svgInject" alt="eBoutiQ" src="{{ asset('frontend/assets/imgs/theme/icons/icon-compare.svg')}}" />
-                    <span class="pro-count blue" id="compQty">0 </span>
+ <div class="header-action-icon-2">
+    <a href="{{ route('compare') }}">
+        <img class="svgInject" alt="Nest" src="{{ asset('frontend/assets/imgs/theme/icons/icon-compare.svg')}}" />
+        <span class="pro-count blue" id="compQty">0 </span>
 
-                </a>
-                <a href="{{ route('compare') }}"><span class="lable ml-0">Comparer</span></a>
-            </div>
+    </a>
+    <a href="{{ route('compare') }}"><span class="lable ml-0">Compare</span></a>
+</div>
 
             <div class="header-action-icon-2">
                 <a href="{{ route('wishlist') }}">
-                    <img class="svgInject" alt="eBoutiQ" src="{{ asset('frontend/assets/imgs/theme/icons/icon-heart.svg') }}" />
+                    <img class="svgInject" alt="Nest" src="{{ asset('frontend/assets/imgs/theme/icons/icon-heart.svg') }}" />
                     <span class="pro-count blue" id="wishQty">0 </span>
                 </a>
-                <a href="{{ route('wishlist') }}"><span class="lable">Liste Achats</span></a>
+                <a href="{{ route('wishlist') }}"><span class="lable">Wishlist</span></a>
             </div>
 
 
@@ -124,8 +124,8 @@
 
             <div class="header-action-icon-2">
                 <a class="mini-cart-icon" href="shop-cart.html">
-                    <img alt="Dôvv" src="{{ asset('frontend/assets/imgs/theme/icons/icon-cart.svg') }}" />
-                    <span class="pro-count blue" id="cartQty">0 </span>
+                    <img alt="Nest" src="{{ asset('frontend/assets/imgs/theme/icons/icon-cart.svg') }}" />
+                    <span class="pro-count blue" id="cartQty">0</span>
                 </a>
                 <a href="{{ route('mycart') }}"><span class="lable">Cart</span></a>
                 <div class="cart-dropdown-wrap cart-dropdown-hm2">
@@ -152,7 +152,7 @@
                         </div>
                                     </div>
                                 </div>
-            </div>
+                            </div>
 
 
 
@@ -217,7 +217,7 @@
 
     @php
 
-$categories = App\Models\Category::orderBy('category_name','ASC')->limit(10)->get();
+$categories = App\Models\Category::orderBy('category_name','ASC')->get();
     @endphp
 
 
@@ -230,7 +230,7 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->limit(10)->ge
                 <div class="header-nav d-none d-lg-flex">
                     <div class="main-categori-wrap d-none d-lg-block">
                         <a class="categories-button-active" href="#">
-                            <span class="fi-rs-apps"></span>Nos Rayons
+                            <span class="fi-rs-apps"></span>   All Categories
                             <i class="fi-rs-angle-down"></i>
                         </a>
 <div class="categories-dropdown-wrap categories-dropdown-active-large font-heading">
@@ -279,13 +279,13 @@ $categories = App\Models\Category::orderBy('category_name','ASC')->limit(10)->ge
                 <ul>
 
                     <li>
-                        <a class="active" href="{{ url('/') }}">Accueil  </a>
+                        <a class="active" href="{{ url('/') }}">Home  </a>
 
                     </li>
 
     @php
 
-$categories = App\Models\Category::orderBy('category_name','ASC')->limit(5)->get();
+$categories = App\Models\Category::orderBy('category_name','ASC')->limit(6)->get();
     @endphp
 
    @foreach($categories as $category)
@@ -317,7 +317,7 @@ $subcategories = App\Models\SubCategory::where('category_id',$category->id)->ord
 
 <div class="hotline d-none d-lg-flex">
 <img src="{{ asset('frontend/assets/imgs/theme/icons/icon-headphone.svg') }}" alt="hotline" />
-<p>694692539<span>24/7 Assistance</span></p>
+<p>1900 - 888<span>24/7 Support Center</span></p>
 </div>
 <div class="header-action-icon-2 d-block d-lg-none">
 <div class="burger-icon burger-icon-white">
@@ -550,7 +550,7 @@ $subcategories = App\Models\SubCategory::where('category_id',$category->id)->ord
                 <a href="#"><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-pinterest-white.svg') }}" alt="" /></a>
                 <a href="#"><img src="{{ asset('frontend/assets/imgs/theme/icons/icon-youtube-white.svg') }}" alt="" /></a>
             </div>
-            <div class="site-copyright">Copyright 2022 © Nest. All rights reserved. Powered by AliThemes.</div>
+            <div class="site-copyright">Copyright 2023 © eBoutiQ. All rights reserved. Powered by AliThemes.</div>
         </div>
     </div>
 </div>

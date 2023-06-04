@@ -16,7 +16,7 @@
     <div class="row mb-50 mt-30">
         <div class="col-md-6 col-sm-12 col-xs-12 mb-md-0 mb-sm-5">
             <div class="detail-gallery">
-                <span class="zoom-icon"><i class="fi-rs-search"></i></span>
+                {{-- <span class="zoom-icon"><i class="fi-rs-search"></i></span> --}}
                 <!-- MAIN SLIDES -->
                 <div class="product-image-slider">
                 	@foreach($multiImage as $img)
@@ -108,12 +108,12 @@
      @else
 
 <div class="attr-detail attr-size mb-30">
-        <strong class="mr-10" style="width:50px;">Format: </strong>
+        <strong class="mr-10" style="width:50px;">Mesure: </strong>
 
          <select class="form-control unicase-form-control" id="dformat">
          	<option selected="" disabled="">--Choisir--</option>
-         	@foreach($product_format as $format)
-         	<option value="{{ $format }}">{{ ucwords($format)  }}</option>
+         	@foreach($product_format as $mesure)
+         	<option value="{{ $mesure }}">{{ ucwords($mesure)  }}</option>
          	@endforeach
          </select>
     </div>
@@ -154,8 +154,9 @@
     <button type="submit" class="button button-add-to-cart" onclick="addToCartDetails()"><i class="fi-rs-shopping-cart"></i>Ajout au Panier</button>
 
 
-                        <a aria-label="Add To Wishlist" class="action-btn hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
-                        <a aria-label="Compare" class="action-btn hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+    <a aria-label="Ajout Liste" class="action-btn" id="{{ $product->id }}" onclick="addToWishList(this.id)"  ><i class="fi-rs-heart"></i></a>
+
+    <a aria-label="Comparer" class="action-btn" id="{{ $product->id }}" onclick="addToCompare(this.id)"><i class="fi-rs-shuffle"></i></a>
                     </div>
                 </div>
 
@@ -514,9 +515,11 @@
                 </a>
             </div>
             <div class="product-action-1">
-                <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-search"></i></a>
-                <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html" tabindex="0"><i class="fi-rs-heart"></i></a>
-                <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html" tabindex="0"><i class="fi-rs-shuffle"></i></a>
+                <a aria-label="Ajout Liste" class="action-btn" id="{{ $product->id }}" onclick="addToWishList(this.id)"  ><i class="fi-rs-heart"></i></a>
+
+<a aria-label="Comparer" class="action-btn" id="{{ $product->id }}" onclick="addToCompare(this.id)"><i class="fi-rs-shuffle"></i></a>
+
+<a aria-label="Prévisualiser" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal" id="{{ $product->id }}" onclick="productView(this.id)" ><i class="fi-rs-eye"></i></a>
             </div>
 
             	 @php

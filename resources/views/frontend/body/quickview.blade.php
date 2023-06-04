@@ -27,7 +27,7 @@
  </div>
 
 <div class="attr-detail attr-size mb-20" id="formatArea">
-<strong class="mr-10" style="width:60px;">Format: </strong>
+<strong class="mr-10" style="width:60px;">Mesure: </strong>
      <select class="form-control unicase-form-control" id="format" name="format">
 
 

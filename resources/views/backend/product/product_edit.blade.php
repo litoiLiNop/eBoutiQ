@@ -51,7 +51,7 @@
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Format</label>
+				<label for="inputProductTitle" class="form-label">Mesure</label>
 				<input type="text" name="product_format" class="form-control visually-hidden" data-role="tagsinput" value="{{ $products->product_format }} ">
 			  </div>
 

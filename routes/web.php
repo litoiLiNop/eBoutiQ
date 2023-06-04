@@ -8,7 +8,11 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\CouponController;
 use App\Http\Controllers\Backend\VendorProductController;
+use App\Http\Controllers\Backend\ShippingAreaController;
+
+
 use App\Http\Middleware\RedirectIfAuthenticated;
 
 use App\Http\Controllers\Backend\SubCategoryController;
@@ -212,6 +216,60 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
     });
 
+    // Coupon All Route
+    Route::controller(CouponController::class)->group(function () {
+        Route::get('/all/coupon', 'AllCoupon')->name('all.coupon');
+        Route::get('/add/coupon', 'AddCoupon')->name('add.coupon');
+        Route::post('/store/coupon', 'StoreCoupon')->name('store.coupon');
+        Route::get('/edit/coupon/{id}', 'EditCoupon')->name('edit.coupon');
+        Route::post('/update/coupon', 'UpdateCoupon')->name('update.coupon');
+        Route::get('/delete/coupon/{id}', 'DeleteCoupon')->name('delete.coupon');
+
+    });
+
+
+    // Shipping region All Route
+    Route::controller(ShippingAreaController::class)->group(function () {
+        Route::get('/all/region', 'AllRegion')->name('all.region');
+        Route::get('/add/region', 'AddRegion')->name('add.region');
+        Route::post('/store/region', 'StoreRegion')->name('store.region');
+        Route::get('/edit/region/{id}', 'EditRegion')->name('edit.region');
+        Route::post('/update/region', 'UpdateRegion')->name('update.region');
+        Route::get('/delete/region/{id}', 'DeleteRegion')->name('delete.region');
+
+    });
+
+
+    // Shipping Ville All Route
+    Route::controller(ShippingAreaController::class)->group(function () {
+        Route::get('/all/ville', 'AllVille')->name('all.ville');
+        Route::get('/add/ville', 'AddVille')->name('add.ville');
+        Route::post('/store/ville', 'StoreVille')->name('store.ville');
+        Route::get('/edit/ville/{id}', 'EditVille')->name('edit.ville');
+        Route::post('/update/ville', 'UpdateVille')->name('update.ville');
+        Route::get('/delete/ville/{id}', 'DeleteVille')->name('delete.ville');
+
+    });
+
+    // Shipping Quartier All Route
+    Route::controller(ShippingAreaController::class)->group(function () {
+        Route::get('/all/quartier', 'AllQuartier')->name('all.quartier');
+        Route::get('/add/quartier', 'AddQuartier')->name('add.quartier');
+        Route::post('/store/quartier', 'StoreQuartier')->name('store.quartier');
+        Route::get('/edit/quartier/{id}', 'EditQuartier')->name('edit.quartier');
+        Route::post('/update/quartier', 'UpdateQuartier')->name('update.quartier');
+
+        Route::get('/delete/quartier/{id}', 'DeleteQuartier')->name('delete.quartier');
+        Route::get('/ville/ajax/{region_id}', 'GetVille');
+
+    });
+
+
+
+
+
+
+
 }); // Admin End Middleware
 
 /// Frontend Product Details All Route
@@ -253,6 +311,18 @@ Route::post('/add-to-wishlist/{product_id}', [WishlistController::class, 'AddToW
 /// Add to Compare
 Route::post('/add-to-compare/{product_id}', [CompareController::class, 'AddToCompare']);
 
+/// Frontend Coupon Option
+Route::post('/coupon-apply', [CartController::class, 'CouponApply']);
+
+Route::get('/coupon-calculation', [CartController::class, 'CouponCalculation']);
+Route::get('/coupon-remove', [CartController::class, 'CouponRemove']);
+
+// Checkout Page Route
+Route::get('/checkout', [CartController::class, 'CheckoutCreate'])->name('checkout');
+
+
+
+
 //Start Group User Middleware
 
 Route::middleware(['auth', 'role:user'])->group(function () {
@@ -277,11 +347,13 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     // Cart All Route
     Route::controller(CartController::class)->group(function () {
         Route::get('/mycart', 'MyCart')->name('mycart');
-        // Route::get('/get-cart-product', 'GetCartProduct');
-        // Route::get('/cart-remove/{rowId}', 'CartRemove');
+        Route::get('/get-cart-product', 'GetCartProduct');
+        Route::get('/cart-remove/{rowId}', 'CartRemove');
 
-        // Route::get('/cart-decrement/{rowId}', 'CartDecrement');
-        // Route::get('/cart-increment/{rowId}', 'CartIncrement');
+        Route::get('/cart-decrement/{rowId}', 'CartDecrement');
+        Route::get('/cart-increment/{rowId}', 'CartIncrement');
+
+
 
 
     });

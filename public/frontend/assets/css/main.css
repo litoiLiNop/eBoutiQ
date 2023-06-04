@@ -1025,7 +1025,7 @@ h5.widget-title {
 }
 
 .text-hot {
-    color: #f74b81;
+    color: #d45500;
 }
 
 .text-new {
@@ -1169,11 +1169,11 @@ button[type="submit"] {
 
 button.submit:hover,
 button[type="submit"]:hover {
-    background-color: #f74b81 !important;
+    background-color: #d45500 !important;
 }
 
 .btn-brand:hover {
-    background-color: #f74b81 !important;
+    background-color: #d45500 !important;
 }
 
 .btn-login {
@@ -1219,7 +1219,7 @@ button[type="submit"]:hover {
 
 .btn:hover,
 .button:hover {
-    background-color: #f74b81;
+    background-color: #d45500;
 }
 
 .btn.btn-sm,
@@ -4285,7 +4285,7 @@ table .product-thumbnail img {
 }
 
 .product-cart-wrap .product-badges span.hot {
-    background-color: #f74b81;
+    background-color: #d45500;
 }
 
 .product-cart-wrap .product-badges span.new {
@@ -5332,7 +5332,7 @@ table .product-thumbnail img {
 }
 
 .stock-status.out-stock {
-    color: #f74b81;
+    color: #d45500;
     background: #fde0e9;
 }
 
@@ -7071,7 +7071,7 @@ h6.post-title {
 }
 
 .vendor-wrap .product-badges.product-badges-position span.hot {
-    background-color: #f74b81;
+    background-color: #d45500;
 }
 
 .vendor-wrap .product-badges.product-badges-position span.new {
@@ -8886,7 +8886,7 @@ h6.post-title {
 }
 
 .header-style-1 .main-categori-wrap > a:hover {
-    background-color: #f74b81;
+    background-color: #d45500;
 }
 
 .header-style-1 .main-menu.main-menu-light-white > nav > ul > li > a {

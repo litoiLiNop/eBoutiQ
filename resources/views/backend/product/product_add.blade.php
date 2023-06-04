@@ -44,17 +44,17 @@
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Taille du Produit</label>
+				<label for="inputProductTitle" class="form-label">Taille</label>
 				<input type="text" name="product_size" class="form-control visually-hidden" data-role="tagsinput" value="Petite,Moyenne,Large ">
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Format du Produit</label>
+				<label for="inputProductTitle" class="form-label">Mesure</label>
 				<input type="text" name="product_format" class="form-control visually-hidden" data-role="tagsinput" value="125 g,1 Kg,12 cl ">
 			  </div>
 
 			  <div class="mb-3">
-				<label for="inputProductTitle" class="form-label">Couleur du Produit</label>
+				<label for="inputProductTitle" class="form-label">Couleur</label>
 				<input type="text" name="product_color" class="form-control visually-hidden" data-role="tagsinput" value="Rouge,Bleu,Noir">
 			  </div>
 
@@ -106,7 +106,7 @@
 					<input type="text" name="discount_price" class="form-control" id="inputCompareatprice" placeholder="00.00">
 				  </div>
 				  <div class="form-group col-md-6">
-					<label for="inputCostPerPrice" class="form-label">Code du Produit</label>
+					<label for="inputCostPerPrice" class="form-label">Code Produit</label>
 					<input type="text" name="product_code" class="form-control" id="inputCostPerPrice" placeholder="00.00">
 				  </div>
 				  <div class="form-group col-md-6">

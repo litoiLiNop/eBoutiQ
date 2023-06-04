@@ -112,6 +112,38 @@
             </ul>
         </li>
 
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bx bx-category"></i>
+                </div>
+                <div class="menu-title">Gestion Coupons </div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('all.coupon') }}"><i class="bx bx-right-arrow-alt"></i>Coupons</a>
+                </li>
+                <li> <a href="{{ route('add.coupon') }}"><i class="bx bx-right-arrow-alt"></i>Ajout Coupon</a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class="bx bx-category"></i>
+                </div>
+                <div class="menu-title">Gestion Livraisons </div>
+            </a>
+            <ul>
+                <li> <a href="{{ route('all.region') }}"><i class="bx bx-right-arrow-alt"></i>Regions</a>
+                </li>
+                <li> <a href="{{ route('all.ville') }}"><i class="bx bx-right-arrow-alt"></i>Villes</a>
+                </li>
+                <li> <a href="{{ route('all.quartier') }}"><i class="bx bx-right-arrow-alt"></i>Quartiers</a>
+                </li>
+
+            </ul>
+        </li>
+
 
         <li class="menu-label">UI Elements</li>
 
